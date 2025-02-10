@@ -22,7 +22,8 @@ def test_avalanche_effect(input_file):
         new_hash = simple_hash(test)
         flips = count_bit_flips(base_hash, new_hash)
         bit_flip_counts[flips] += 1
-        print(f"Change '{test_strings[0]}' -> '{test}': {flips} bit flips")
+        # Uncomment line below to print each bitflip
+        # print(f"Change '{test_strings[0]}' -> '{test}': {flips} bit flips")
 
     # Generate Matplotlib histogram
     plt.bar(bit_flip_counts.keys(), bit_flip_counts.values(), width=0.6)

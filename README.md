@@ -46,43 +46,43 @@ Execute the main script to run all tests:
 python3 main.py
 ```
 This will:
-1. **Run the Uniformity Test** – Checking hash distribution.
-2. **Run the Avalanche Effect Test** – Measuring how sensitive the hash function is to small input changes.
-3. **Run the Collision Test** – Finding and analyzing hash collisions.
+1. **Run the Uniformity Test** – Checking hash distribution.  
+2. **Run the Avalanche Effect Test** – Measuring how sensitive the hash function is to small input changes.  
+3. **Run the Collision Test** – Finding and analyzing hash collisions.  
 
 ---
 
 ## **Test Explanations**
 ### **🔹 Uniformity Test (`uniformity.py`)**
-- Reads lines from `Uniformity_test.txt`.
-- Hashes each line and tracks bucket distribution.
-- Uses **Matplotlib** to visualize the hash distribution across 256 buckets.
+- Reads lines from `Uniformity_test.txt`.  
+- Hashes each line and tracks bucket distribution.  
+- Uses **Matplotlib** to visualize the hash distribution across 256 buckets.  
 
 ### **🔹 Avalanche Effect Test (`avalanche.py`)**
 - Reads `assignment1_Avalanche_test.txt`.
-- Modifies characters in test strings to measure **bit flips** in the hash.
-- Plots a histogram of bit flip frequencies using **Matplotlib**.
+- Modifies characters in test strings to measure **bit flips** in the hash.  
+- Plots a histogram of bit flip frequencies using **Matplotlib**.  
 
 ### **🔹 Collision Test (`insecurity.py`)**
-- Hashes multiple lines from `Uniformity_test.txt`.
-- Identifies **collisions (same hash for different inputs)**.
-- Tracks total and unique collisions to assess hash function security.
+- Hashes multiple lines from `Uniformity_test.txt`.  
+- Identifies **collisions (same hash for different inputs)**.  
+- Tracks total and unique collisions to assess hash function security.  
 
 ---
 
 ## **Expected Output & Interpretation**
 
 ### **Uniformity Test Output (Example Histogram)**
-✔ A good hash function should **spread values evenly** across all 256 buckets.
-✔ If some buckets are overloaded, the hash function is **not distributing well**.
+✔ A good hash function should **spread values evenly** across all 256 buckets.  
+✔ If some buckets are overloaded, the hash function is **not distributing well**.  
 
 The following histogram shows the hash distribution from our tests:
 
 ![Uniformity Histogram](images/hash_distibution-uniformity_test.png)
 
 ### **Avalanche Effect Output (Example Histogram)**
-✔ A strong hash function should **flip ~50% of bits** when input changes slightly.
-✔ If bit flips are too low, the hash function is **too weak**.
+✔ A strong hash function should **flip ~50% of bits** when input changes slightly.  
+✔ If bit flips are too low, the hash function is **too weak**.  
 
 The following histogram shows the bit flip distribution from our tests:
 
@@ -96,16 +96,16 @@ Total collision occurrences: 64,863
 Max collisions in a single bucket: 5193
 Average collisions per occupied bucket: 253.37
 ```
-✔ If many different inputs hash to the same value, the function is **not cryptographically secure**.
-✔ High collision counts confirm that an **8-bit hash is too small** for security applications.
+✔ If many different inputs hash to the same value, the function is **not cryptographically secure**.  
+✔ High collision counts confirm that an **8-bit hash is too small** for security applications.  
 
 ---
 
 ## **Conclusions**
-This project demonstrates that **while the hash function works for general hashing, it is not cryptographically secure**.
-✔ The **uniformity is fairly good**, though small tweaks improved distribution.
-✔ The **avalanche effect is well-balanced**, meaning small changes in input cause widespread bit flips.
-✔ The **collision rate is high**, proving this hash function is **unsuitable for security applications** but useful for learning purposes.
+This project demonstrates that **while the hash function works for general hashing, it is not cryptographically secure**.  
+✔ The **uniformity is fairly good**, though small tweaks improved distribution.  
+✔ The **avalanche effect is well-balanced**, meaning small changes in input cause widespread bit flips.  
+✔ The **collision rate is high**, proving this hash function is **unsuitable for security applications** but useful for learning purposes.  
 
 ---
 

@@ -3,9 +3,9 @@
 ## **Overview**
 This project implements and analyzes a simple **8-bit hash function** to explore its properties, including **uniformity, avalanche effect, and collision resistance**. The project is divided into three main tasks:
 
-✅ **6a – Implement a Simple Hash Function**  
-✅ **6b – Evaluate Uniformity and Avalanche Effect**  
-✅ **6c – Demonstrate Insecurity through Collision Analysis**  
+✅ **Implement a Simple Hash Function**  
+✅ **Evaluate Uniformity and Avalanche Effect**  
+✅ **Demonstrate Insecurity through Collision Analysis**  
 
 ## **Project Structure**
 ```
